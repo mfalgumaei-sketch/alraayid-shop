@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>محلات الرائد للدراجات النارية </title>
+<body bgcolor="#2C3E50" text="width" dir="rtl"> <!-- تلوين خلفية الصفحة -->
+    <header align="center">
+         
+        <marquee direction="right" scrollamount="5">  <!-- عنوان متحرك -->
+        <h1><font face="Tahoma">مرحباً بكم في محلات الرائد للدراجات النارية </font></h1></marquee>
+        <h3><p>وجهتكم الاولى لأفضل الدراجات وقطع غيارها</p></h3>
+
+    </header>
+    <hr> <nav align="center" >
+        <b>
+        
+        <a href ="index.html"><font color="#FFD700"> الرئيسية </font></a>&nbsp;|
+
+        <a href="product.html"><font color="#FFD700"> القطع والزينة</font></a>&nbsp;|
+
+        <a href="contact.html"><font color="#FFD700"> الصيانة والخدمات </font></a>&nbsp;|
+<hr>
+        </b>
+        
+
+        <table align="center" width="80%" bgcolor="#34495E" cellpadding="20" style="border-radius: 15px;">
+    <tr>
+        <td>
+            <h2 align="center" style="color: #FFD700;">طلب صيانة طارئة</h2>
+            <form id="serviceForm">
+                الاسم الكريم:<br>
+                <input type="text" id="name" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+                
+                نوع الدراجة:<br>
+                <input type="text" id="bike" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+                
+                نوع العطل:<br>
+                <textarea id="issue" style="width: 100%; height: 80px; padding: 10px; margin-bottom: 10px;"></textarea><br>
+                
+                موقعك الحالي:<br>
+                <input type="text" id="location" style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+                
+                <button type="button" onclick="sendWhatsApp()" style="width: 100%; padding: 15px; background: #2ECC71; color: white; border: none; font-size: 18px; cursor: pointer;">
+                    إرسال الطلب عبر واتساب
+                </button>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<script>
+function sendWhatsApp() {
+    var name = document.getElementById("name").value;
+    var bike = document.getElementById("bike").value;
+    var issue = document.getElementById("issue").value;
+    var location = document.getElementById("location").value;
+    
+    var text = "مرحباً، أريد طلب صيانة طارئة:%0A" +
+               "الاسم: " + name + "%0A" +
+               "الدراجة: " + bike + "%0A" +
+               "العطل: " + issue + "%0A" +
+               "الموقع: " + location;
+               
+    window.open("https://wa.me/733441521?text=" + text, "_blank");
+}
+</script>
+
+<footer align="center" >
+    <hr>
+        <b>
+        <p> 2026 &copy;جميع الحقوق محفوظة لمحلات الرائد</p>
+        <p> العنوان:دمت /الشارع العام/ أمام الكلية العامرية</p>
+        <p>تطوير م/محمد الجماعي </p>
+        </b>
+    </footer>  

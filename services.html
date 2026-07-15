@@ -37,7 +37,7 @@
                 نوع الدراجة:<br>
                 <input type="text" id="bike" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
                 
-                نوع العطل:<br>
+                العطل العطال:<br>
                 <textarea id="issue" style="width: 100%; height: 80px; padding: 10px; margin-bottom: 10px;"></textarea><br>
                 
                 موقعك الحالي:<br>
@@ -61,10 +61,10 @@ function sendWhatsApp() {
     var text = "مرحباً، أريد طلب صيانة طارئة:%0A" +
                "الاسم: " + name + "%0A" +
                "الدراجة: " + bike + "%0A" +
-               "العطل: " + issue + "%0A" +
+               "نوع" + issue + "%0A" +
                "الموقع: " + location;
                
-    window.open("https://wa.me/00967733441521?text=" + text, "_blank");
+    window.open("https://wa.me/+967733441521?text=" + text, "_blank");
 }
 </script>
 
